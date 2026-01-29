@@ -1,10 +1,10 @@
-local playerPed = PlayerPedId()  -- Nicht verwendet, nur für Komplettheit
+local playerPed = PlayerPedId()  
 
--- Server-Event: Starte Skydiving für spezifischen Spieler (z.B. von Admin-Script)
+
 RegisterNetEvent('skydive:start')
 AddEventHandler('skydive:start', function(targetId)
     local src = source
-    targetId = targetId or src  -- Default: selbst
+    targetId = targetId or src  
 
     if not GetPlayerPing(targetId) then
         print('^1[SKYDIVE] Ungültiger Spieler-ID: ' .. targetId .. '^7')
@@ -12,17 +12,17 @@ AddEventHandler('skydive:start', function(targetId)
         return
     end
 
-    TriggerClientEvent('skydive:startClient', targetId)  -- Client-Event triggern [web:40]
+    TriggerClientEvent('skydive:startClient', targetId)  
     print('^2[SKYDIVE] Skydiving gestartet für Spieler: ' .. GetPlayerName(targetId) .. ' (ID: ' .. targetId .. ')^7')
 end)
 
--- Server-Command: /skydiving [ID] (Admin-only, anpassbar)
+
 RegisterCommand('skydiving', function(source, args)
     local targetId = tonumber(args[1])
-    TriggerEvent('skydive:start', targetId)  -- Event triggern [web:41]
+    TriggerEvent('skydive:start', targetId)  
 end, false)
 
--- Export: Server-seitig aufrufbar (z.B. aus SQRZ-Framework)
+
 exports('ServerStartSkyDive', function(targetId)
     TriggerEvent('skydive:start', targetId)
 end)
