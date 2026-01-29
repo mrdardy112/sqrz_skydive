@@ -31,7 +31,7 @@ Lightweight standalone resource for realistic skydiving. Teleports to 4500m abov
 - `client.lua`: Player interaction, loops, tasks
 - `server.lua`: Commands, events, validation
 
-**Discord Support:** [Your Discord link here]  
+**Discord Support:** https://discord.gg/yqHsd3rZxA  
 **Languages:** ![Lua](https://raw.githubusercontent.com/devicons/devicon/master/icons/lua/lua-original.svg) ![FiveM](https://avatars.githubusercontent.com/u/28798151?s=200&v=4)
 
 ---
