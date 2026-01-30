@@ -37,4 +37,6 @@ Lightweight standalone resource for realistic skydiving. Teleports to 4500m abov
 ---
 *First public script by SQRZ DEVS – Updates coming!*
 
+LG @mr.dardy112
+
 
